@@ -1,23 +1,24 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
+    "username": "workcom_api",
+    "password": "EfQps7zg8Edu9LukWkzK",
+    "database": "workcom_live_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "workcom_api",
+    "password": "EfQps7zg8Edu9LukWkzK",
+    "database": "workcom_live_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
+    "username": "workcom_api",
+    "password": "EfQps7zg8Edu9LukWkzK",
+    "database": "workcom_live_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
+    

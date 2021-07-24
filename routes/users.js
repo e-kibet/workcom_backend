@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const controller = require('../controllers/index')
 
 /** 
  * @swagger 
@@ -10,9 +11,10 @@ var router = express.Router();
  *       200: 
  *         description: Success  
  *   
- */ 
-router.get('/users', function(req, res, next) {
-  res.send('respond with a resource');
-});
+ */
+
+// router.post('/users', joi.user.validateBody(joi.user.schemas.schema), modules.user.create);
+
+// router.get('/users', jwt.checkAuth, modules.user.fetch);
 
 module.exports = router;
