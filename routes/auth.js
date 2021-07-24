@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const controller = require('../controllers/index')
 const helpers = require('../helpers/index')
+const joi = require('../joi/index')
 
 /** 
  * @swagger 
@@ -14,6 +15,6 @@ const helpers = require('../helpers/index')
  *   
  */
 
-router.get('/auth/checkPhone', helpers.jwt.checkAuth, controller.auth.checkPhone);
+router.post('/auth/checkphone', joi.validateBody(joi.schemas.checkphone), controller.auth.checkPhone);
 
 module.exports = router;

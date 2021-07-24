@@ -6,7 +6,7 @@ exports.create = async (req, res) => {
         await models.users.create({
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            email: req.body.email,
+            msisdn: req.body.msisdn,
             password: req.body.password,
             group_id: req.body.group_id,
         }, { transaction: t, raw: true, truncate: true }).then(async (user) => {

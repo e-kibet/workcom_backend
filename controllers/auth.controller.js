@@ -41,6 +41,7 @@ exports.checkPhone = async (req, res, next) => {
                 return helpers.response.successResponseWithData(res, 'success', user);
             }
         }, async error => {
+            console.error(error);
             res.status(500).json({ status: false, status_code: 500, status_message: JSON.stringify(error) });
         })
     } catch (e) {

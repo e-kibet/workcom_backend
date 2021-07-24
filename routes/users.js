@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const controller = require('../controllers/index')
+const helpers = require('../helpers/index')
+const joi  = require('../joi/index')
 
 /** 
  * @swagger 
@@ -13,8 +15,8 @@ const controller = require('../controllers/index')
  *   
  */
 
-// router.post('/users', joi.user.validateBody(joi.user.schemas.schema), modules.user.create);
+router.post('/users', joi.validateBody(joi.schemas.registeruser), controller.user.create);
 
-// router.get('/users', jwt.checkAuth, modules.user.fetch);
+router.get('/users', controller.user.fetch);
 
 module.exports = router;
