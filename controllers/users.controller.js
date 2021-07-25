@@ -2,9 +2,9 @@ const service = require('../services/index');
 
 exports.create = async (req, res) => {
     try {
-        await service.user.create(req, res).then(async function (results) {
+        await service.user.create(req, res).then(async (results) => {
             res.status(200).json({ status: true, status_code: 200, status_message: 'User created successfully' });
-        }, async function (error) {
+        }, async (error) => {
             res.status(500).json({ status: false, status_code: 500, status_message: error.errors[0].message.split('.') });
         })
     } catch (e) {
@@ -13,9 +13,9 @@ exports.create = async (req, res) => {
 }
 exports.fetch = async (req, res) => {
     try {
-        await service.user.fetch(req).then(async function (results) {
+        await service.user.fetch(req).then(async (results)=> {
             res.status(200).json(results);
-        }, async function (error) {
+        }, async (error) => {
             console.log(error);
             res.status(500).json({ status: false, status_code: 500, status_message: JSON.stringify(error) });
         })

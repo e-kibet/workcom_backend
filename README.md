@@ -1,0 +1,10 @@
+WORKCOM BACKEND APIS
+-------------------------------
+
+Technologies:
+
+MYSQL
+EXPRESS
+NODEJS
+RABBITMQ
+DOCKER & DOCKERCOMPOSE

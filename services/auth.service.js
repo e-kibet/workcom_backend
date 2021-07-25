@@ -11,7 +11,7 @@ exports.login = async (req) => {
 }
 exports.checkPhone = async (req)=>{
     return new Promise(async (resolve, reject)=>{
-        await models.users.findOne({ where: { msisdn: req.body.msisdn } }).then(async (user) => {
+        await models.users.findOne({ where: { msisdn: req.body.msisdn }, attributes: ['first_name', 'last_name', 'msisdn', 'last_login'] }).then(async (user) => {
             resolve(user);
         }, async (error) => {
             reject(error);

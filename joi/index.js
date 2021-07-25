@@ -15,6 +15,12 @@ module.exports = {
             msisdn: Joi.string().required(),
             group_id: Joi.string().valid('1', '2').required(),
             password: Joi.string().required()
+        }),
+        createproject: Joi.object().keys({
+            project_name: Joi.string().required(),
+            owner_id: Joi.string().required(),
+            start_date: Joi.string().required(),
+            end_date: Joi.string().required()
         })
     },
 
